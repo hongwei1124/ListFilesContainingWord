@@ -4,7 +4,7 @@ import java.io.File;
 class Lister(aDir:String,aWord:String){
   
   private val allFiles : List[String] = List[String]()
-  private val filesContainWord: List[String] = getListOfFiles(aDir)
+  private val filesContainWord: List[String] = getListOfFiles(aDir).filter(e=>containWord(e,aWord))
 
   
   //list all file names under a directory recursively
@@ -38,17 +38,17 @@ class Lister(aDir:String,aWord:String){
   
   //list all file names under a directory which contains the word
   def listOfFilesContainWord():List[String]={
-    filesContainWord.filter(e=>containWord(e,aWord))
+    filesContainWord
   }
   
   //list file contents as one string under a directory if the file contains the word
   def listOfContentOfFilesContainWord():List[String]={
-    filesContainWord.filter(e=>containWord(e,aWord)).map(e=>Source.fromFile(e).getLines.mkString)
+    filesContainWord.map(e=>Source.fromFile(e).getLines.mkString)
   }
   
   //list all files
   def listOfFiles():List[String]={
-     filesContainWord
+     allFiles
   }
   
 

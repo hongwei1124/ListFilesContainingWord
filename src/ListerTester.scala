@@ -13,6 +13,16 @@ class ListerTester extends FlatSpec with Matchers {
     
     lister.listOfContentOfFilesContainWord().map(e=> e should be ("Scala1Scala2"))
   }
+  
+  "A ListerObject.listOfFilesContainWord" should "list all files under a directory which contain the word" in {
+    
+    ListerObject.listOfFilesContainWord("../ListFilesContainingWord/resource","Scala").toList.size should be (2)
+  }
+  
+  "A ListerObject.listOfContentOfFilesContainWord" should "list all files content under a directory which contain the ward" in {
+    
+    ListerObject.listOfContentOfFilesContainWord("../ListFilesContainingWord/resource","Scala").map(e=> e should be ("Scala1Scala2"))
+  }
 
   
 }

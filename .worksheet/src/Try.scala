@@ -37,11 +37,11 @@ import java.io.File;import org.scalaide.worksheet.runtime.library.WorksheetSuppo
 	
 	getListOfFiles("/home/hongwei/workspace/ListFilesContainingWord").filter(e=>containWord(e,"Scala")).map(e=>println(e));System.out.println("""res0: List[Unit] = """ + $show(res$0));$skip(125); val res$1 = 
 	
-	getListOfFiles("/home/hongwei/workspace/ListFilesContainingWord").filter(e=>containWord(e,"Scala")).map(e=>printAFile(e));System.out.println("""res1: List[Unit] = """ + $show(res$1))}
+	getListOfFiles("/home/hongwei/workspace/ListFilesContainingWord").filter(e=>containWord(e,"Scala")).map(e=>printAFile(e));System.out.println("""res1: List[Unit] = """ + $show(res$1));$skip(154); val res$2 = 
   
 	
 	
                                                   
-	
+	ListerObject.listOfFilesContainWord("/home/hongwei/workspace/ListFilesContainingWord","Scala");System.out.println("""res2: List[String] = """ + $show(res$2))}
 	
 }

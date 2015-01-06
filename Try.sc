@@ -39,7 +39,10 @@ import java.io.File;
 	getListOfFiles("/home/hongwei/workspace/ListFilesContainingWord").filter(e=>containWord(e,"Scala")).map(e=>println(e))
                                                   //> /home/hongwei/workspace/ListFilesContainingWord/Try.sc
                                                   //| /home/hongwei/workspace/ListFilesContainingWord/.worksheet/src/Try.scala
-                                                  //| res0: List[Unit] = List((), ())
+                                                  //| /home/hongwei/workspace/ListFilesContainingWord/resource/dir2/test3.txt
+                                                  //| /home/hongwei/workspace/ListFilesContainingWord/resource/Test1.txt
+                                                  //| /home/hongwei/workspace/ListFilesContainingWord/src/ListerTester.scala
+                                                  //| res0: List[Unit] = List((), (), (), (), ())
 	
 	getListOfFiles("/home/hongwei/workspace/ListFilesContainingWord").filter(e=>containWord(e,"Scala")).map(e=>printAFile(e))
                                                   //> object Try {import scala.io.Source;import java.io.File;	val allFiles : L
@@ -63,6 +66,11 @@ import java.io.File;
 	
 	
                                                   
-	
+	ListerObject.listOfFilesContainWord("/home/hongwei/workspace/ListFilesContainingWord","Scala")
+                                                  //> res2: List[String] = List(/home/hongwei/workspace/ListFilesContainingWord/T
+                                                  //| ry.sc, /home/hongwei/workspace/ListFilesContainingWord/.worksheet/src/Try.s
+                                                  //| cala, /home/hongwei/workspace/ListFilesContainingWord/resource/dir2/test3.t
+                                                  //| xt, /home/hongwei/workspace/ListFilesContainingWord/resource/Test1.txt, /ho
+                                                  //| me/hongwei/workspace/ListFilesContainingWord/src/ListerTester.scala)
 	
 }
